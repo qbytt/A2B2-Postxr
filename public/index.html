@@ -46,9 +46,6 @@
   </div>
   
   <div id="ui" class="hide">
-    <div id="warning-box">
-      <span id="warning"><i>VideoTextures Disabled In Firefox</i></span>
-    </div>
     <a id="website" href="https://a2b2.org/">a2b2.org</a>
     <div class="ui-content">
       <div class="ui-footer" class="noselect">
@@ -57,8 +54,15 @@
     </div>
   </div>
 
-  <video id="video-fire" playsinline webkit-playsinline muted loop autoplay width="480" height="480" src="./video/fire.mp4" style="display: none;"></video>
-  <video id="video-prom" playsinline webkit-playsinline muted loop autoplay width="730" height="730" src="./video/promo.mp4" style="display: none;"></video>
+  <video id="video-fire" loop muted crossOrigin="anonymous" width="480" height="480" playsinline style="display:none">
+    <source src="./video/fireo.ogv" type='video/ogg; codecs="theora, vorbis"'>
+    <source src="./video/fire.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
+
+  <video id="video-prom" loop muted crossOrigin="anonymous" width="480" height="480" playsinline style="display:none">
+    <source src="./video/promo.ogv" type='video/ogg; codecs="theora, vorbis"'>
+    <source src="./video/prom.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
 
   <!-- include vendors -->
   <script src="/js/vendors/plugins.min.js"></script>

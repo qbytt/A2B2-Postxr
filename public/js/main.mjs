@@ -145,8 +145,6 @@ function mouseRescale(delta) {
     let arToolkitSource, arToolkitContext;
 
     let blocker = document.getElementById('app-blocker');
-    
-    let warning = document.getElementById('warning');
 
     let ui = document.getElementById('ui');
 
@@ -162,11 +160,11 @@ function mouseRescale(delta) {
 
     let names = [
         "axis0",
+        "axis1",
         "poster_0",
         "poster_1",
         "poster_2",
         "poster_3",
-        "axis1",
     ]
 
     let index = 0;
@@ -193,16 +191,6 @@ function mouseRescale(delta) {
 
             let n = names[index];
             objects.get(n).visible = true;
-
-            let w = "";
-            
-            if(n.includes('axis')) {
-              w = "<i>VideoTextures Disabled In Firefox</i>";
-            }
-
-            if(warning != undefined) {
-                warning.innerHTML = w;
-            }
         }
     }
 
@@ -417,7 +405,6 @@ function mouseRescale(delta) {
 
                     gltf.scene.traverse((child) => {
                         let name = child.name.toLowerCase();
-                        console.log(name);
                         if(directives.has(name)) {
                             let dir = directives.get(name);
                             dir(child);
