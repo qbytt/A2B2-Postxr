@@ -198,7 +198,7 @@ function mouseRescale(delta) {
         texture.minFilter = THREE.LinearFilter;
         texture.magFilter = THREE.LinearFilter;
         texture.format = THREE.RGBFormat;
-        texture.crossOrigin = 'anonymous';
+        // texture.crossOrigin = 'anonymous';
 
         let geometry = new THREE.PlaneGeometry(1,1);
         let material = new THREE.MeshBasicMaterial({ map: texture});
