@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 html, body {
@@ -22,8 +24,13 @@ html, body {
     height: 100%;
 }
 
+#content img {
+    width: 256px;
+    height: 256px;
+}
+
 #back {
     position: fixed;
-    left: 16px;
-    bottom: 16px;
+    left: 32px;
+    bottom: 32px;
 }
