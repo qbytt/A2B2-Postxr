@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>&#9889;nof2xr&#9889;</title>
+  <meta name="description" content="A2B2 PRESENTS NIGHT OF FIRE 2">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="&#9889; nof2xr &#9889;">
+  <meta property="og:type" content="a2b2.org">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="https://i.imgur.com/TnqEHsm.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/nprogress.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+
+  <div id="prompt">
+    <div id="prompt-notice">
+      <img src="./img/camera.svg">
+      <div id="prompt-notice-text">
+        <span>Press Start & Point Camera At QR Code</span>
+        <a href="./pages/marker.html"> Get QR Code </a>
+      </div>
+    </div>
+    <div id="prompt-button">
+      <button id="start"></button>
+    </div>
+  </div>
+
+  <div id="app-blocker">
+    <div id="status">
+      <span id="status-data" class="blink">[LOADING] %0</span>
+    </div>
+    <div id="logo">
+      <img src="./img/logo-outline.svg">
+    </div>
+  </div>
+  
+  <div id="ui" class="hide">
+    <a id="website" href="https://a2b2.org/">a2b2.org</a>
+    <div class="ui-content">
+      <div class="ui-footer" class="noselect">
+        <img src="img/instructions.svg">
+      </div>
+    </div>
+  </div>
+
+  <video id="video-fire" playsinline webkit-playsinline muted loop autoplay width="480" height="480" src="./video/fire.mp4" style="display: none;"></video>
+  <video id="video-prom" playsinline webkit-playsinline muted loop autoplay width="730" height="730" src="./video/promo.mp4" style="display: none;"></video>
+
+  <!-- include vendors -->
+  <script src="/js/vendors/plugins.min.js"></script>
+  <script src="/js/vendors/nprogress.min.js"></script>
+  
+  <!-- include three.js -->
+  <script src='/js/three/three.min.js'></script>
+  <script src='/js/three/loaders/GLTFLoader.min.js'></script> 
+
+  <!-- include jsartookit -->
+  <script src="/js/jsartoolkit/artoolkit.min.js"></script>
+  <script src="/js/jsartoolkit/artoolkit.api.min.js"></script>
+
+  <!-- include threex.artoolkit -->
+  <script src="/js/threex/artoolkitsource.min.js"></script>
+  <script src="/js/threex/artoolkitcontext.min.js"></script>
+  <script src="/js/threex/arbasecontrols.min.js"></script>
+  <script src="/js/threex/armarkercontrols.min.js"></script>
+
+  <!-- application -->
+  <script type="module" src="/js/main.mjs"></script>
+</body>
+
+</html>
