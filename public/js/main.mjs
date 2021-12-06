@@ -137,7 +137,7 @@ function mouseRescale(delta) {
 
 (async function() {
     
-    const MODEL_PATH = "/3d/mod.glb";
+    const MODEL_PATH = "/3d/model.glb";
 
     let scene, camera, light, renderer;
 
@@ -341,7 +341,7 @@ function mouseRescale(delta) {
         arToolkitContext = new THREEx.ArToolkitContext({
             cameraParametersUrl: '/data/camera/camera_para.dat',
             detectionMode: 'mono',
-            patternRatio: 0.5
+            patternRatio: 0.9
         });
         
         // init artoolkitcontext
@@ -377,7 +377,7 @@ function mouseRescale(delta) {
     
         // init controls for camera
         let markerControls = new THREEx.ArMarkerControls(arToolkitContext, _root, {
-            type: 'pattern', patternUrl: "/data/patterns/hiro.patt",
+            type: 'pattern', patternUrl: "/data/patterns/qr.patt",
         })
 
         markerControls.addEventListener('markerFound', function(event) {
