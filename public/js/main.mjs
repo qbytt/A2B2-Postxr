@@ -9,6 +9,7 @@ let _scaleAfter = 0;
 let _scaling = false;
 
 window.addEventListener('touchstart', function (e) {
+    e.preventDefault();
     _scaling = e.touches.length === 2;
     if(_scaling) {
         onTouchStart(e);
