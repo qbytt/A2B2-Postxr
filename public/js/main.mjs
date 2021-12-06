@@ -145,6 +145,8 @@ function mouseRescale(delta) {
 
     let blocker = document.getElementById('app-blocker');
     
+    let warning = document.getElementById('warning');
+
     let ui = document.getElementById('ui');
 
     let initialized = false;
@@ -159,11 +161,11 @@ function mouseRescale(delta) {
 
     let names = [
         "axis0",
-        "axis1",
         "poster_0",
         "poster_1",
         "poster_2",
-        "poster_3"
+        "poster_3",
+        "axis1",
     ]
 
     let index = 0;
@@ -188,7 +190,18 @@ function mouseRescale(delta) {
                 }
             });
 
-            objects.get(names[index]).visible = true;
+            let n = names[index];
+            objects.get(n).visible = true;
+
+            let w = "";
+            
+            if(n.includes('axis')) {
+              w = "<i>VideoTextures Disabled In Firefox</i>";
+            }
+
+            if(warning != undefined) {
+                warning.innerHTML = w;
+            }
         }
     }
 

@@ -98,10 +98,26 @@ html, body {
 
 #website {
   position: absolute;
-  top: 24px;
+  bottom: 24px;
   left: 24px;
   z-index: 888;
   color: #fff200;
+}
+
+#warning-box {
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 888;
+    font-size: small;
+    color: #fff200; 
+}
+
+#warning {
+    padding: 8px;
 }
 
 .blink {
